@@ -6,37 +6,37 @@ namespace Console_template_1 // Ja izmantosi šo kodu kā template, neaizmirsti 
     {
         static void Main(string[] args)
         {
-			string yesno; 
-			do
-			{
-				Console.Clear(); // Ar šo funkciju dzešam iepriekšējo izvadu no konsoles
+		string yesno; 
+		do
+		{
+			Console.Clear(); // Ar šo funkciju dzešam iepriekšējo izvadu no konsoles
 // Viss kods, kas būs iekš šiem komentariem atkartosies kāmēr, atbildēsi ar "y".
 //-------------------------atkartojama koda sākums------------------------------	
 
-				// ReadInt32() Pielietojums:
+			// ReadInt32() Pielietojums:
 
-				Console.Write("lūdzu, ievadi integer: "); //prasam lietotājam ievadīt veselo skaitli
-				int ievads = ReadInt32(); //iniciējam mainīgo un _Console.ReadLine()_ vietā izsaucam mūsu funkciju
+			Console.Write("lūdzu, ievadi integer: "); //prasam lietotājam ievadīt veselo skaitli
+			int ievads = ReadInt32(); //iniciējam mainīgo un _Console.ReadLine()_ vietā izsaucam mūsu funkciju
 
-				/* Šīs kods aizvieto: int ievads = Convert.ToInt32(Console.Readline()); 
+		/* Šīs kods aizvieto: int ievads = Convert.ToInt32(Console.Readline()); 
                  * Papildus tam, kāmēr Programma nesaņems pareizo ievadu, tikmēr lietotājs
                  * saņems paziņojumu par kļūdu un tiks prasīts jauns ievads, tā ka mēs
                  * varam droši izmantot uzreiz integer tipa mainīgo. */
 
-				Console.WriteLine("Tu ievādīji: " + ievads); //izvadam ievadu
+			Console.WriteLine("Tu ievādīji: " + ievads); //izvadam ievadu
 
-				//Funkciju izsaukt var arī šādi:
-				Console.Write("vēl viens ievada variānts: ");
-				Console.WriteLine("tu ievādīji pa taisno: " + ReadInt32());
+			//Funkciju izsaukt var arī šādi:
+			Console.Write("vēl viens ievada variānts: ");
+			Console.WriteLine("tu ievādīji pa taisno: " + ReadInt32());
 
 
 
 //--------------------------atkartojama koda beigas-----------------------------
-				Console.Write("Vēlies atkartot? (y/n): ");
-				yesno = Console.ReadLine();
+			Console.Write("Vēlies atkartot? (y/n): ");
+			yesno = Console.ReadLine();
 
-			}
-			while (yesno == "y");
+		}
+		while (yesno == "y");
 
         }
         //------------------Zemāk rakstam savas funkcijas-----------------------
@@ -46,7 +46,7 @@ namespace Console_template_1 // Ja izmantosi šo kodu kā template, neaizmirsti 
 
 
         //--------Zemāk ir ievada un pārbaudes funkcija priekš integer----------
-		static int ReadInt32() //Ievada funkcija un pārbaude uz Int32
+	static int ReadInt32() //Ievada funkcija un pārbaude uz Int32
         {
             int checkOk; // ar šo mainīgo atgriežam funkcijas darbības rezultātu
             int output;  //šeit glabāsim starprezultātu ja TryParse atgriezīs "true"
@@ -70,6 +70,6 @@ namespace Console_template_1 // Ja izmantosi šo kodu kā template, neaizmirsti 
             checkOk = output; //Ja ievadā bija skaitlis (TryParse == true) tad piešķiram to funkcijas izvadam
 
             return checkOk; // funkcijas izvads
-		} // Šīs ir ReadInt32() funkcijas beigas
+	} // Šīs ir ReadInt32() funkcijas beigas
     }
 }
